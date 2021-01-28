@@ -1,4 +1,9 @@
-package PathWithMinimumEffort;public class DijkstraSolution {
+package PathWithMinimumEffort;
+
+import java.util.Arrays;
+import java.util.PriorityQueue;
+
+public class DijkstraSolution {
     int[] rd = new int[] {1,0,-1,0};
     int[] cd = new int[] {0,1,0,-1};
     public int minimumEffortPath(int[][] heights) {
@@ -6,7 +11,7 @@ package PathWithMinimumEffort;public class DijkstraSolution {
         int[][] dist = new int[n][m];
         for(int[] arr: dist) Arrays.fill(arr, Integer.MAX_VALUE);
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[2]-b[2]); // will  be [r, c, value] key_value
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b)->a[2]-b[2]); // will  be [r, c, value] key_value
         pq.offer(new int[]{0, 0, 0});
 
         while(!pq.isEmpty()) {
