@@ -22,7 +22,8 @@ So a few shifts of Integer.MAX_VALUE + 1 should look like this:
 
 The operation that describes that kind of shift is the unsigned shift (also "logical shift") operator, denoted by >>>.
 
-The operation denoted by >> is indeed also a shift (the "signed" or "arithmetic" shift), but not the shift we're looking for (since it fills in whatever the sign bit is, either 0 or 1)
+The operation denoted by >> is indeed also a shift (the "signed" or "arithmetic" shift), 
+but not the shift we're looking for (since it fills in whatever the sign bit is, either 0 or 1)
 
 A few shifts of Integer.MAX_VALUE + 1 using the >> operator would look like this:
 1100 0000 0000 0000 0000 0000 0000 0000
