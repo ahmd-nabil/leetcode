@@ -2,7 +2,7 @@ package ShortestDistanceToCharacter;
 
 import java.util.Arrays;
 
-public class Solution {
+public class DpSolution {
     public int[] shortestToChar(String s, char c) {
         int n = s.length();
         int[] ans = new int[n];
