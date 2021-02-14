@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /*
 * Why Not DP ??
-Simple Answer, you shouldn't use dp for overlapping subproblems(here you can move backward in all 8 directions so dp doesn't work)
+Simple Answer, you shouldn't use dp for because here you can move backward in all 8 directions so dp doesn't work
 
 Check this example:
 [
