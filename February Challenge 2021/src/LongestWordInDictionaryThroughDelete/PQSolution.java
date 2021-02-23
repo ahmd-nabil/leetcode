@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 public class PQSolution {
     public String findLongestWord(String s, List<String> d) {
-        PriorityQueue<String> pq = new PriorityQueue<>(new MyComparator()); // wanna check reverse of string lexo
+        PriorityQueue<String> pq = new PriorityQueue<>(new MyComparator());
         for(String s2: d) {
             int i = 0;
             for(char c: s.toCharArray()) {
