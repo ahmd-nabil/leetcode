@@ -3,7 +3,7 @@ package IntegerToRoman;
 import java.util.TreeMap;
 
 public class MapSolution {
-    public static String intToRoman(int num) {
+    public String intToRoman(int num) {
         TreeMap<Integer, String> map = new TreeMap<>((a, b) -> b-a);
         map.put(1, "I");
         map.put(5, "V");
@@ -21,7 +21,7 @@ public class MapSolution {
 
         StringBuilder res = new StringBuilder();
         for(int i: map.keySet()) {
-            while(num > i) {
+            while(num >= i) {
                 res.append(map.get(i));
                 num -= i;
             }
