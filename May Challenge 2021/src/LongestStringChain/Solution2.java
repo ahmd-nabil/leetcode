@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution2 {
+    // Accepted
     public int longestStrChain(String[] words) {
         Arrays.sort(words, Comparator.comparingInt(String::length)); // N * log(N)
         Map<String, Integer> map = new HashMap<>();

@@ -1,13 +1,12 @@
 package LongestStringChain;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Solution {
+    // TLE
     public int longestStrChain(String[] words) {
         List<String>[] A = new ArrayList[1001];
+        Arrays.fill(A, new ArrayList<>());
         Map<String, Integer> map = new HashMap<>();
         map.put("", 0);
         A[0].add("");
@@ -16,8 +15,8 @@ public class Solution {
             map.put(word, 1);
         }
         int ans = 1;
-        for(int i=0; i<1000; i++) {
-            for(String pre: A[i]) {    // N * N * L
+        for(int i=0; i<1000; i++) { // N * N * L
+            for(String pre: A[i]) {
                 for(String nxt: A[i+1]) {
                     if(predecessor(pre, nxt)) {
                         map.put(nxt, Math.max(map.get(nxt), map.get(pre) + 1));
